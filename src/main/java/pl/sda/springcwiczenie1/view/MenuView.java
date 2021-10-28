@@ -13,9 +13,9 @@ public class MenuView {
     private final DeleteAppView deleteAppView;
     private final InstallNewAppView installNewAppView;
     private final UpdateAppView updateAppView;
+    private final Scanner scanner;
 
     public void display() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Aplikacje na komputerze:");
         while (true) {
             System.out.println("1. Wyświetl wszystkie.");
@@ -23,7 +23,7 @@ public class MenuView {
             System.out.println("3. Aktualizuj.");
             System.out.println("4. Usuń.");
             System.out.println("5. Wyjdź.");
-            int option = Integer.valueOf(scanner.next());
+            int option = Integer.valueOf(scanner.nextLine());
 
             switch (option) {
                 case 1:

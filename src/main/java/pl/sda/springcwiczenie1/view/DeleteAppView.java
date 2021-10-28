@@ -11,15 +11,15 @@ import java.util.Scanner;
 public class DeleteAppView {
 
     private final ApplicationService applicationService;
+    private final Scanner scanner;
 
     public void display() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj ID aplikaacji do usunięcia");
         Long id = Long.valueOf(scanner.nextLine());
 
         try {
             applicationService.delete(id);
-        } catch (RuntimeException ex){
+        } catch (RuntimeException ex) {
             System.out.println("ERROR: " + ex.getMessage());
         }
     }
