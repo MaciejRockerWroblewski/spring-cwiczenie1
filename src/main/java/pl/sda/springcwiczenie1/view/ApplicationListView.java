@@ -15,7 +15,7 @@ public class ApplicationListView {
         service.listAll().forEach(this::displayAppRow);
     }
     public void displayAppRow (Application application) {
-        System.out.println(String.format("%d | %s | %s | %s",
+        System.out.println(String.format("%d | %20s | %20s | %10s",
                 application.getId(), application.getProducer(),
                 application.getName(), application.getVersion()));
     }
